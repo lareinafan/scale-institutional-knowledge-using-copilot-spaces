@@ -29,3 +29,8 @@ Communication and quality are continuous throughout delivery. Teams maintain a r
 
 ### Cross-cutting process support
 - [Risk Management and Communication](./octoacme-risks-and-communication.md)
+
+
+---
+
+*For questions about these processes, use the OctoAcme Project Management Hub Copilot Space.*
