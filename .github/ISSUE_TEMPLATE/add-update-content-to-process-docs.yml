@@ -39,12 +39,46 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: lifecycle_phase
+    attributes:
+      label: "Which lifecycle phase(s) does this update affect most?"
+      description: "Select the primary phase this change supports."
+      options:
+        - Initiation
+        - Planning
+        - Execution & Tracking
+        - Risk Management & Communication
+        - Release & Deployment
+        - Retrospective & Continuous Improvement
+        - Cross-phase / Multiple phases
+    validations:
+      required: true
+
+  - type: textarea
+    id: ownership_and_handoffs
+    attributes:
+      label: "Ownership and handoffs"
+      description: "Who owns this process step and who receives the handoff? Include any role/persona changes."
+      placeholder: "Owner: Project Manager\nHandoff to: Engineering Manager + Developers\nImpacted personas: Release Manager, Support Readiness Lead"
+    validations:
+      required: true
+
   - type: textarea
     id: example_content
     attributes:
       label: "Suggested Content (optional)"
       description: "Paste the proposed new text, checklist, diagram, or example content you'd like to add. (Optional)"
       placeholder: "E.g., - New checklist items, - Copy for a new section, - Example scenario, etc."
+
+  - type: textarea
+    id: operating_details
+    attributes:
+      label: "Cadence, status signals, and success check"
+      description: "Document expected cadence and how teams will know the update is working."
+      placeholder: "Cadence: weekly risk review\nStatus signals: risk register updated + clear blocker owner\nSuccess check: fewer unclear escalations over 2 sprints"
+    validations:
+      required: true
 
   - type: checkboxes
     id: acceptance_criteria
@@ -55,3 +89,5 @@ body:
         - label: "Content aligns with existing process docs"
         - label: "Update improves clarity or closes a documented gap"
         - label: "Proposed content has been reviewed with stakeholders (if needed)"
+        - label: "Handoffs, ownership, and cadence are explicit and actionable"
+        - label: "Feedback loop to backlog/docs updates is described"
